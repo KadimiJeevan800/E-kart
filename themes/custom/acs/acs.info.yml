@@ -1,0 +1,12 @@
+name: acs
+type: theme
+base theme: false
+core_version_requirement : ^8 || ^9
+logo: 'images/logo.png'
+libraries:
+  - acs/global-styling
+regions:
+  header:  header
+  Breadcrumbs: Breadcrumbs
+  content: content
+  footer: footer

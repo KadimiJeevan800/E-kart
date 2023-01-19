@@ -1,0 +1,120 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+
+<!--acs/block-content -->
+<div{{ attributes.addClass('block') }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  <div class="Footer">
+  {% block content %}
+    
+    <div class="footer-items">
+    {# footer top #}
+      <div class="footer-top-block">
+        <div class="footer-top-logo">
+          <a href="/E-kart/"> {{ content.field_footer_web_icon }} </a>
+        </div>
+
+        <div class="footer-top-social-links">
+          <div class="footer-top-social-link">
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <div class="footer-top-social-link">
+            <a href=""><i class="fa-brands fa-facebook-f"></i> </a>
+          </div>
+          <div class="footer-top-social-link">
+            <a href=""><i class="fa-brands fa-youtube"></i> </a>
+          </div>
+          <div class="footer-top-social-link">
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </div>
+
+        </div> 
+      </div>
+      {# Footer menu  #}
+      <div class="footer-menu">
+        <div class="row">
+            {# <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div> #}
+            {{ drupal_menu("footer-menu") }}
+        </div>
+      </div>
+      {# footer copy rights #}
+    <div class="copy-right">
+      <div class="row">
+         <div class="copy-right-text"> 
+         Copyright {{ 'now'|date('Y') }} Helmer Scientific Inc.
+
+         </div>
+         <div class="copy-right-links"> 
+            <div class="copy-right-link"> 
+            <a href="/terms">Terms of use </a>
+            </div>
+            <div class="copy-right-link"> 
+            <a href="/privacy">Privacy Policy </a>
+            </div>
+            <div class="copy-right-link"> 
+            <a href="/sales">Sales Terms & Conditions </a>
+            </div>
+            <div class="copy-right-link"> 
+            <a href="/contact">Contact Us </a>
+            </div>
+            <div class="copy-right-link"> 
+            <a href="/phone">800-743-5637 </a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+    </div>
+  
+  {% endblock %}
+  </div>
+</div> 
+
+
+{# <div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div> #}
+
+
+<!--/.block-content end -->
+ 

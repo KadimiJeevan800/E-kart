@@ -1,0 +1,94 @@
+// Adding Ubuntu font family to the site
+@font-face {
+    font-family: "Ubuntu";
+    src: url(/themes/custom/acs/fonts/Ubuntu/Ubuntu-Regular.ttf);
+    font-display: swap
+  }
+  
+   
+  
+  @font-face {
+    font-family: "Ubuntu Light";
+    src: url(/themes/custom/acs/fonts/Ubuntu/Ubuntu-Light.ttf);
+    font-display: swap
+  }
+  
+   
+  
+  @font-face {
+    font-family: "Ubuntu Semi Bold";
+    src: url(/themes/custom/acs/fonts/Ubuntu/Ubuntu-Medium.ttf);
+    font-display: swap
+  }
+  
+   
+  
+  @font-face {
+    font-family: "Ubuntu Bold";
+    src: url(/themes/custom/acs/fonts/Ubuntu/Ubuntu-Bold.ttf);
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "Ubuntu Italic";
+    src: url(/themes/custom/acs/fonts/Ubuntu/Ubuntu-Italic.ttf);
+    font-display: swap
+  }
+  
+  
+  @font-face {
+    font-family: "TradeGothicLTPro Bold";
+    src: url(/themes/custom/acs/fonts/Trade_Gothic_Font/Trade_Gothic_LT_Bold.ttf);
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "TradeGothicLTPro light";
+    src: url(/themes/custom/acs/fonts/Trade_Gothic_Font/Trade_Gothic_LT_Light.ttf);
+    font-display: swap
+  }
+  
+  @font-face {
+    font-family: "TradeGothicLTPro regular";
+    src: url(/themes/custom/acs/fonts/Trade_Gothic_Font/Trade_Gothic_LT.ttf);
+    font-display: swap
+  }
+   
+
+// SofiaSans Font Family Imports
+  @font-face {
+    font-family: "SofiaSans Extra Bold";
+    src: url(/themes/custom/acs/fonts/SofiaSansExtraCondensed/static/SofiaSansExtraCondensed-ExtraBold.ttf);
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "SofiaSans Semi Bold";
+    src: url(/themes/custom/acs/fonts/SofiaSansExtraCondensed/static/SofiaSansExtraCondensed-SemiBold.ttf);
+    font-display: swap
+  }
+  @font-face {
+    font-family: "SofiaSans Bold";
+    src: url(/themes/custom/acs/fonts/SofiaSansExtraCondensed/static/SofiaSansExtraCondensed-Bold.ttf);
+    font-display: swap
+  }
+
+
+  @font-face {
+    font-family: "SofiaSans regular";
+    src: url(/themes/custom/acs/fonts/SofiaSansExtraCondensed/static/SofiaSansExtraCondensed-Regular.ttf);
+    font-display: swap
+  }
+  
+  
+  @font-face {
+    font-family: "SofiaSans meduim";
+    src: url(/themes/custom/acs/fonts/SofiaSansExtraCondensed/static/SofiaSansExtraCondensed-Medium.ttf);
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: "SofiaSans light";
+    src: url(/themes/custom/acs/fonts/SofiaSansExtraCondensed/static/SofiaSansExtraCondensed-Light.ttf);
+    font-display: swap
+  }

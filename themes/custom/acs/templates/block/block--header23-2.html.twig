@@ -1,0 +1,79 @@
+<div{{attributes.addClass('block')}}>
+	{{ title_prefix }}
+	{% if label %}
+		<h2{{title_attributes.addClass('block-title')}}>{{ label }}</h2>
+	{% endif %}
+	{{ title_suffix }}
+	<div class="block-content">
+		{% block content %}
+
+			<div class="header-block-items">
+				{# <div class="site-header-logo"> #}
+				{# <div class="topnav mobile" id="myTopnavm">
+						 <div class="topnav-links ">
+																																               
+									{{ drupal_menu('main')}}
+									 {{ drupal_menu("header-2023") }}
+									<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+									<i class="fa fa-bars"></i>
+									</a>
+							</div>   
+				</div> #}
+
+				{# Hamberger Menu Button Creation  #}
+
+				{# <div class="menu-toggler" id="toggle"> 
+					<i class="fa-solid fa-bars active" id="1"></i>
+					<i class="fa-solid fa-times d-none " id="2"></i>
+				</div> #}
+				<div class="container menu-toggler" id="toggle" onclick="myFunction(this)">
+  					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+
+				<div class="site-header-logo">
+					<a href="/E-kart">
+						{{ content.field_header_logo }}
+					</a>
+				</div>
+				{# </div> #}
+
+				<div class="site-header-menu-items">
+					<div class="header-secondary-menu">
+						{{ drupal_menu("header-2023") }}
+					</div>
+
+					<div class="header-primary-menu ">
+
+						<div class="site-header-primary-menu">
+							{{  drupal_menu("main") }}
+						</div>
+						{# <span id="line-br"></span> #}
+						<div class="site-header-icons">
+							<ul>
+								<li id="search-btn"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+
+								<li id="user-account"><a href="/E-kart/user/login"><i class="fa-solid fa-circle-user"></i></a></li>
+
+								<li id="cart-btn"><a href="/E-kart/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+
+				</div>
+
+
+			</div>
+
+
+		{% endblock %}
+	</div>
+</div>
+<div class="mobile-wrap">
+  <div id="mobilev">
+	{{  drupal_menu("main") }}
+	{{ drupal_menu("header-2023") }}
+  </div>
+</div>

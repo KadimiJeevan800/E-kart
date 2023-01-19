@@ -1,0 +1,29 @@
+{
+  "name": "acs-sass",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Sass CSS processing for ACS Theme",
+  "main": "index.js",
+  "scripts": {
+      "//scss_comment": "sass sass/main.scss css/styles.css --style compressed",
+      "scss": "sass sass/main.scss css/compiled-styles.css",
+      "build": "npm run scss",
+      "watch:css": "sass --watch sass/main.scss css/compiled-styles.css",
+      "watch": "npm run watch:css",
+      "script": "npm run build && npm run watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+      "browser-sync": "^2.27.11",
+      "fs": "0.0.1-security",
+      "gulp": "^4.0.2",
+      "gulp-sass": "^5.1.0",
+      "gulp-sourcemaps": "^3.0.0",
+      "nunjucks": "^3.2.3",
+      "path": "^0.12.7",
+      "prettify-html": "0.0.2",
+      "sass": "^1.55.0",
+      "scss": "^0.2.4"
+  }
+}

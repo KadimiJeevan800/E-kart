@@ -1,0 +1,166 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ * Theme template file for main navigation is menu--main.html.twig
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+
+{# 
+{% import _self as menus %}
+
+
+ {{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('menu') }}>
+    {% else %}
+      <ul class="submenu">
+    {% endif %}
+      {% for item in items %}
+        {% set item_classes = [
+            'menu-item',
+            'menu-item-level-' ~ (menu_level + 1),
+            item.in_active_trail ? 'menu-item-active',
+            item.below ? 'menu-item-has-children',
+          ]
+        %}
+        <li{{ item.attributes.addClass(item_classes) }}>
+          {{ link(item.title, item.url) }}
+        </li>
+
+          {% if item.below %}
+            <div class="show" id="show"> 
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            </div>
+          {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %} #}
+
+
+
+
+<div class="navbar">
+  {% import _self as menus %}
+
+
+  {{ menus.menu_links(items, attributes, 0) }}
+
+  {% macro menu_links(items, attributes, menu_level) %}
+    {% import _self as menus %}
+      {% if items %}
+        {{item.field_recent}}
+          {% for item in items %}
+            {# li elements with children #}
+            {% if item.below %}
+          
+            <div class="dropdown nav-items">
+            
+              <li class="dropbtn">{{ link(item.title, item.url) }}
+              <i class="fa-solid fa-angle-right" id="arrow"></i>
+              </li>
+              
+
+              {# {{ dump(item.content.field_show_content[0]["#markup"]) }} #}
+              {% if (item.content.field_show_content[0]["#markup"]) == '1'  %}
+                <div class="dropdown-content max-cont ">
+                  {# <div class="max-cont"> #}
+                  {# <div class="recent-product-item" >
+                    <h4> Recently Viewed product</h4>
+                    {{ item.content.field_recent }}
+                    <a href="#" id="rp-link"> i.Series® Double Door Laboratory Refrigerator  </a>
+                  </div> #}
+                  <div class="grand-parent">
+                  <div class="recent-product-item">
+                    <h4> Recently Viewed product</h4>
+                    {{ item.content.field_recent }}
+                    <a href="#" id="rp-link"> i.Series® Double Door Laboratory Refrigerator  </a>
+                    
+                  </div>
+                {% else %}
+              <div class="dropdown-content fit-content">
+              
+                <div class="grand-parent">
+
+              {% endif  %}
+              <div class="menu-items">
+              {% for it in item.below %}
+                <div class="grand-parent-children">
+                
+                <b class="parent">{{ link(it.title, it.url) }} </b> 
+                {% if it.below %}
+                    {% for i in it.below %}
+                    {# <p class="parent-children"> {{ link(i.title, i.url) }} </p>   #}
+                    {{ link(i.title, i.url) }}
+                    {% endfor %}
+                {% endif %}
+                </div>
+              {% endfor %}
+              </div>
+              </div>
+                 
+            </div>
+          </div>
+
+              
+        {# list items with no children   #}
+        {% else %}
+          <div class="nav-items">
+            {{ link(item.title, item.url) }}
+          </div>
+         {% endif %}
+      {% endfor %}
+  {% endif %}
+{% endmacro %}
+
+
+</div>
+
+  {#
+   <div class="dropdown">
+            
+            <li class="dropbtn">{{ link(item.title, item.url) }} 
+            </li>
+            <div class="dropdown-content">
+                 <div class="grand-parent">
+                 {% for it in item.below %}
+                 
+                   <div class="parent"><a>{{ link(it.title, it.url) }} </a> </div>
+                    {% if it.below %}
+                    <div class="children">
+                       {% for i in it.below %}
+                        <a>{{ link(i.title, i.url) }} </a> 
+                       {% endfor %}
+                     </div>
+                    {% endif %}
+                  
+                 {% endfor %}
+                 </div>
+            </div>
+          </div>
+  
+  
+   #}
+
+
+
+
+{# changes.txt we have the content #}
