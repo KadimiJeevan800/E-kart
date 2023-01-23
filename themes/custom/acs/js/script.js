@@ -23,18 +23,16 @@ function myFunction() {
   var flag=0;
   // document.getElementById("2").classList.add("none");
   document.getElementById("mobilev").classList.add("none");
+  document.getElementById("mobile-v").style.display="none";
   element.addEventListener('click',()=>
   {
     // alert("Clicked event");
     if(flag==0)
     {
-      // document.getElementById("2").classList.add("active");
-      // document.getElementById("1").classList.add("none");
-      // document.getElementById("2").classList.remove("none");
-      // document.getElementById("1").classList.remove("active");
-     
+  
       document.getElementById("arrow").classList.add("rotate");
       document.getElementById("mobilev").classList.add("active");
+      document.getElementById("mobile-v").style.display="block";
       // document.getElementById("mobilev").classList.toggle("active");
       document.getElementById("mobilev").classList.remove("none");
       flag=1;
@@ -42,14 +40,15 @@ function myFunction() {
     }
     else
     {
-      // document.getElementById("1").classList.add("active");
-      // document.getElementById("2").classList.add("none");
-      // document.getElementById("2").classList.remove("active");
-      // document.getElementById("1").classList.remove("none");
+     
       document.getElementById("arrow").classList.remove("rotate");
       document.getElementById("mobilev").classList.add("none");
+      
       document.getElementById("mobilev").classList.remove("active");
       flag=0;
+        // document.getElementById("mobile-v").style.display="none";
+   
+      
     }
 
   })
@@ -127,10 +126,30 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// function previous(v)
-// {
-//   console.log("called prev");
-// }
+
+
+
+//search form code
+
+var searchform =document.getElementById("search");
+searchform.style.display="none";
+var searchbtn= document.getElementById("search-btn");
+
+console.log(searchbtn);
+searchbtn.addEventListener('click',()=>
+{
+
+    searchform.style.display="block";
+})
+
+var searchcross= document.getElementById("search-x");
+
+searchcross.addEventListener('click',()=>
+{
+  searchform.style.display="none";
+})
+
+
 
 // Slide Show JS Code
 let slideIndex = 0;
@@ -150,3 +169,7 @@ function showSlides() {
   dots[slideIndex-1].style.backgroundColor = "#ffff"
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
+
+
+
+

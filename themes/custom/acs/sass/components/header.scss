@@ -6,9 +6,42 @@ $fontsize: 18px;
 .mobile-wrap {
   display: none;
 }
-#search-btn
+
+.header
 {
-  cursor:wait;
+  .region-header
+  {
+    position: relative;
+  }
+}
+
+#search
+{
+  position: absolute;
+  background-color: #3a728a;
+  width:100%;
+  top: 0;
+  opacity: 0.8;
+  .block-content
+  {
+    display: flex;
+    justify-content: space-around;
+    form 
+    {
+      flex-grow: 1;
+    }
+  }
+}
+#search-x
+{
+  cursor: pointer;
+  margin: 10px;
+
+  svg 
+  {
+    font-size: 22px;
+    font-weight: 600;
+  }
 }
 #arrow
 {
@@ -161,7 +194,7 @@ header {
   background-color: $textcolor;
   z-index: 1;
   width: 100%;
-  top: 94px;
+  top: 95px;
   right: 0px;
 
   .grand-parent {
@@ -192,6 +225,11 @@ header {
 .menu-items {
   display: flex;
   padding-top: 5px;
+
+  .grand-parent-children 
+  {
+    padding-left: 10px;
+  }
 }
 .fit-content {
   width: auto;
@@ -427,10 +465,31 @@ tr:nth-child(even) {
     opacity: 0;
     transform: rotateX(90deg);
   }
-  50% {
-   
-    transform: rotateX(20deg);
+  12%
+  {
+    opacity: 1;
+    transform: rotateX(83deg);
   }
+  25%
+  {
+    opacity: 1;
+    transform: rotateX(75deg);
+  }
+  40% 
+  {
+    opacity: 1;
+    transform: rotateX(62deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateX(50deg);
+  }
+  75% 
+  {
+    opacity: 1;
+    transform: rotateX(25deg);
+  }
+
   100% {
     opacity: 1;
     transform: rotateX(0deg);
@@ -443,9 +502,20 @@ tr:nth-child(even) {
     opacity: 1;
     transform: rotateX(0deg);
   }
+  25%
+  {
+    opacity: 1;
+    transform: rotateX(-25deg);
+  }
+
   50% {
-    
-    transform: rotateX(-20deg);
+    opacity: 1;
+    transform: rotateX(-50deg);
+  }
+  75%
+  {
+    opacity: 1;
+    transform: rotateX(-75deg);
   }
   100% {
    opacity: 0;
@@ -488,6 +558,7 @@ tr:nth-child(even) {
 
   #toggle {
     display: block;
+    position: relative;
     width: 50px;
     height: 50px;
     padding: 10px 0px 0px 10px;
@@ -541,9 +612,9 @@ tr:nth-child(even) {
   }
 
   .mobile-wrap {
-    display: block;
+    // background-color: $textcolor;
     position: absolute;
-    top: 85px;
+    // top: 85px;
     max-width: 375px;
     z-index: 1;
     width: 100%;
@@ -611,7 +682,7 @@ tr:nth-child(even) {
 .bar1,
 .bar2,
 .bar3 {
-  width: 22px;
+  width: 24px;
   height: 4px;
   background-color: $textcolor;
   margin: 4px 0;
@@ -628,4 +699,10 @@ tr:nth-child(even) {
 
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
+}
+
+
+#edit-submit--3 
+{
+  display: none;
 }
