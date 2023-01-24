@@ -35,19 +35,25 @@
   {{ title_suffix }} #}
   <div class="block-content">
   {% block content %}
-    <div>
-      {{ content }}
-      <div class="popular-search">
-        <h4>Popular Search</h4>
-        
+    <div class="search-bar-c">
+      <div class="search-bar-inside">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        {{ content }}
+
       </div>
-    </div>
   {% endblock %}
   <p id="search-x">
   <i class="fa-solid fa-xmark"> </i>
   </p>
   {{ drupal_breakpoint() }}
   </div>
+       <div class="popular-search">
+        Popular Searches : &nbsp;
+        <a class="serach-btns btn-s"  href="/E-kart/products">Products </a> &nbsp;
+        <a class="serach-btns btn-s"  href="/E-kart/Service Parts">Service Parts </a> &nbsp;
+        <a class="serach-btns btn-s"  href="/E-kart/Manuals">Manuals </a> &nbsp;
+      </div>
+    </div>
 </div> 
 
 
