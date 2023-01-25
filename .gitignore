@@ -1,26 +1,26 @@
-.vscode
-# Ignore node_modules folder
-node_modules
+# .vscode
+# # Ignore node_modules folder
+# node_modules
 
-# Ignore vendor folder
-vendor
+# # Ignore vendor folder
+# vendor
 
-#Ignaore Drupal Files
-.config
-.lock
-.gitattributes
-.eslintrc.josn
-.eslintignore
-.editorconfig
-.csslintrc
-example.gitignore
+# #Ignaore Drupal Files
+# .config
+# .lock
+# .gitattributes
+# .eslintrc.josn
+# .eslintignore
+# .editorconfig
+# .csslintrc
+# example.gitignore
 
-#Ignore Core module
+# #Ignore Core module
 
-core
+# core
 
-# Ignore all text files
-*.txt
+# # Ignore all text files
+# *.txt
 
-# Ignore files related to API keys
-.env
+# # Ignore files related to API keys
+# .env
