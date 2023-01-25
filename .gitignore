@@ -1,9 +1,11 @@
-#.vscode
-# Ignore node_modules folder
-#node_modules
 
-# Ignore vendor folder
-#vendor
+# .vscode
+# # Ignore node_modules folder
+# node_modules
+
+# # Ignore vendor folder
+# vendor
+
 
 # #Ignaore Drupal Files
 # .config
@@ -17,7 +19,9 @@
 
 # #Ignore Core module
 
-# #core
+
+# core
+
 
 # # Ignore all text files
 # *.txt
