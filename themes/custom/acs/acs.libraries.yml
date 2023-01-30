@@ -2,8 +2,18 @@ global-styling:
   version: 1.x
   js:
     js/script.js: {}
+    js/slide.js: {}
+    js/menu.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
   css:
     theme:
       css/compiled-styles.css: {}
       css/style.css: {}
       css/bootstrap.css: {}
+
+jquery-styling:
+  version: 1.x
+  js:
+    js/jquery.js: {}

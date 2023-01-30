@@ -82,6 +82,10 @@
   position: relative;
 }
 
+#search-btn {
+  cursor: pointer;
+}
+
 #search-block-form #edit-submit {
   display: none;
 }
@@ -94,6 +98,7 @@
   opacity: 0.9;
 }
 #search .popular-search {
+  font-family: "Ubuntu", Fallback, sans-serif;
   opacity: 1;
   display: flex;
   width: 50%;
@@ -103,13 +108,16 @@
   color: #fff;
   font-size: 14px;
 }
+#search .popular-search p {
+  margin: 4px;
+}
 #search .popular-search .serach-btns {
   background-color: #231557;
   color: white;
   padding: 3px;
 }
 #search .block-content {
-  padding: 16px;
+  padding: 10px;
 }
 #search .block-content .search-bar-c {
   display: flex;
@@ -124,6 +132,7 @@
 }
 #search .block-content form input {
   width: 50%;
+  height: 50px;
 }
 
 #search-x {
@@ -286,6 +295,9 @@ header li {
   color: #3a728a;
   text-decoration: none;
 }
+.dropdown-content .grand-parent .menu-items {
+  flex-grow: 1;
+}
 .dropdown-content .grand-parent .parent-children {
   margin: 0%;
   padding: 0%;
@@ -299,7 +311,7 @@ header li {
   padding-top: 5px;
 }
 .menu-items .grand-parent-children {
-  padding-left: 10px;
+  flex-grow: 1;
 }
 
 .fit-content {
@@ -309,8 +321,7 @@ header li {
   text-align-last: center;
 }
 .fit-content .grand-parent {
-  display: grid;
-  grid-gap: 2px;
+  display: flex;
 }
 .fit-content .grand-parent .grand-parent-children:hover {
   background-color: white;
@@ -378,6 +389,7 @@ header li {
 .recent-product-item {
   text-align-last: center;
   color: white;
+  flex-grow: 1;
   margin: -1;
   font-size: 16px;
   font-family: "SofiaSans Extra Bold", fallback, sans-serif;
@@ -543,6 +555,24 @@ tr:nth-child(even) {
 }
 
 @media screen and (max-width: 992px) {
+  #search .block-content {
+    padding: 0%;
+  }
+  #search .block-content .fa-magnifying-glass {
+    height: 50px;
+    background-color: #3a728a;
+    color: white;
+    margin-right: 1px;
+  }
+  #search .block-content form input {
+    width: 100%;
+  }
+  #search #search-x {
+    display: none;
+  }
+  #search {
+    position: initial;
+  }
   .site-header-logo {
     height: 50px;
     padding: 0%;
@@ -557,6 +587,7 @@ tr:nth-child(even) {
   }
   #arrow {
     display: block;
+    cursor: pointer;
   }
   #toggle {
     display: block;
@@ -588,6 +619,9 @@ tr:nth-child(even) {
     font-size: 18px;
     float: right;
   }
+  .mobile-wrap {
+    background-color: #3a728a;
+  }
   .mobile-wrap .menu {
     background-color: rgb(20, 63, 91);
   }
@@ -605,6 +639,8 @@ tr:nth-child(even) {
   }
   .mobile-wrap {
     position: absolute;
+    height: 474px;
+    overflow-y: auto;
     max-width: 375px;
     z-index: 1;
     width: 100%;
@@ -640,20 +676,39 @@ tr:nth-child(even) {
     color: #3a728a;
     font-size: 24px;
   }
+  .max-cont .grand-parent-children .parent a {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .max-cont .grand-parent-children a {
+    font-size: 14px;
+  }
   .grand-parent-children {
-    padding: 10px 20px;
+    padding: 8px 0px 8px 20px;
+  }
+  .grand-parent-children .parent a {
+    margin: 0px;
+    font-weight: normal;
+    text-transform: capitalize;
+    font-size: 1rem;
   }
   .dropdown-content {
     display: none;
     position: initial;
     background-color: rgb(20, 63, 91);
   }
+  .dropdown-content .grand-parent {
+    padding: 0px;
+  }
   .dropdown-content .grand-parent .parent-children {
     padding: 3px 6px;
   }
   .menu-items {
     flex-direction: column;
-    width: 100%;
+    width: 100;
+    text-align-last: left;
+    padding: 0px;
   }
 }
 .container {
@@ -687,6 +742,14 @@ tr:nth-child(even) {
   display: none;
 }
 
+.arrow-90 svg {
+  transform: rotate(90deg);
+}
+
+.arrow-0 svg {
+  transform: rotate(0deg);
+}
+
 /* Define standard variables and values for website  Content/ body */
 /* Use the variables */
 body {
@@ -702,7 +765,6 @@ main {
 
 .content {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 5% 1%;
   text-align: center;
   background-color: white;
 }
@@ -763,12 +825,10 @@ main {
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 10px;
-  width: 10px;
+  height: 4px;
+  width: 65px;
   margin: 0 2px;
-  border-radius: 50%;
   display: inline-block;
-  border: 3px solid coral;
   transition: background-color 0.6s ease;
 }
 
@@ -886,6 +946,12 @@ main {
 .front-page-items {
   border: 2px solid #3a728a;
   background-color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .footer-menu .menu {
+    grid-template-columns: auto auto;
+  }
 }
 
 /*# sourceMappingURL=compiled-styles.css.map */

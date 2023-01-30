@@ -5,6 +5,7 @@ core_version_requirement : ^8 || ^9
 logo: 'images/logo.png'
 libraries:
   - acs/global-styling
+  - acs/jquery-styling
 regions:
   header:  header
   Breadcrumbs: Breadcrumbs

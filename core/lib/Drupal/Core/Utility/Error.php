@@ -121,10 +121,11 @@ use Drupal\Core\Database\Log;
     // The first trace is the call itself.
     // It gives us the line and the file of the last call.
     // $call = isset($backtrace[0]) ? $backtrace[0] :  $backtrace;
-    $call = $backtrace[0];
+     $call = ($backtrace[0]);
+ 
 
     // The second call gives us the function where the call originated.
-    if (isset($backtrace[1])) {
+    if (isset($backtrace[1]) ) {
       if (isset($backtrace[1]['class'])) {
         $call['function'] = $backtrace[1]['class'] . $backtrace[1]['type'] . $backtrace[1]['function'] . '()';
       }
